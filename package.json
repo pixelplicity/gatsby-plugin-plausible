@@ -1,7 +1,7 @@
 {
   "name": "gatsby-plugin-plausible",
   "description": "A Gatsby plugin for adding Plausible analytics to your Gatsby site",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Aquil.io <contact@aquil.io>",
   "license": "MIT",
   "repository": "Aquilio/gatsby-plugin-plausible",
