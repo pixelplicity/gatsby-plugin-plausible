@@ -1,4 +1,4 @@
-exports.onRouteUpdate = function ({ location }, { exclude }) {
+exports.onRouteUpdate = function ({ location }) {
   if (
     process.env.NODE_ENV === `production` &&
     typeof window.plausible === `object`

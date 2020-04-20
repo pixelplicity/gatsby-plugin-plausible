@@ -1,6 +1,6 @@
 {
   "name": "gatsby-plugin-plausible",
-  "description": "Gatsby plugin to add Plausible analytics to your site.",
+  "description": "A Gatsby plugin for adding Plausible analytics to your Gatsby site",
   "version": "0.0.1",
   "author": "Aquil.io <contact@aquil.io>",
   "license": "MIT",
@@ -19,6 +19,7 @@
     "build": "babel src --out-dir . --ignore __tests__",
     "watch": "babel -w src --out-dir . --ignore **/__tests__",
     "prepublishOnly": "cross-env NODE_ENV=production npm run build",
+    "version": "auto-changelog -p && git add CHANGELOG.md",
     "lint": "eslint ./src/**/*.js",
     "format": "prettier --write 'src/**/*.js'",
     "test": "npm run lint && jest --coverage"
@@ -32,6 +33,7 @@
     "@babel/cli": "^7.8.4",
     "@babel/core": "^7.9.0",
     "@babel/runtime": "^7.9.2",
+    "auto-changelog": "^2.0.0",
     "babel-eslint": "^10.1.0",
     "babel-preset-gatsby-package": "^0.3.1",
     "cross-env": "^7.0.2",

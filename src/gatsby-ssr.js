@@ -1,12 +1,31 @@
 import React from 'react';
 
+const getOptions = (pluginOptions) => {
+  const plausibleDomain = pluginOptions.customDomain || 'plausible.io';
+  const scriptURI =
+    plausibleDomain === 'plausible.io' ? '/js/plausible.js' : '/js/index.js';
+  const domain = pluginOptions.domain;
+  const excludePaths = pluginOptions.excludePaths || [];
+  const trackAcquisition = pluginOptions.trackAcquisition || false;
+
+  return {
+    plausibleDomain,
+    scriptURI,
+    domain,
+    excludePaths,
+    trackAcquisition,
+  };
+};
+
 exports.onRenderBody = ({ setHeadComponents }, pluginOptions) => {
   if (process.env.NODE_ENV === 'production') {
-    const plausibleDomain = pluginOptions.customDomain || 'plausible.io';
-    const scriptURI =
-      plausibleDomain === 'plausible.io' ? '/js/plausible.js' : '/js/index.js';
-    const domain = pluginOptions.domain;
-    const excludePaths = pluginOptions.excludePaths || [];
+    const {
+      plausibleDomain,
+      scriptURI,
+      domain,
+      excludePaths,
+      trackAcquisition,
+    } = getOptions(pluginOptions);
 
     const plausibleExcludePaths = [];
     const Minimatch = require(`minimatch`).Minimatch;
@@ -25,6 +44,7 @@ exports.onRenderBody = ({ setHeadComponents }, pluginOptions) => {
         key="gatsby-plugin-plausible-script"
         async
         defer
+        data-track-acquisition={trackAcquisition}
         data-domain={domain}
         src={`https://${plausibleDomain}${scriptURI}`}
       ></script>,
