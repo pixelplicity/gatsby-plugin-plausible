@@ -33,6 +33,15 @@ exports.onRenderBody = ({ setHeadComponents }, pluginOptions) => {
       const mm = new Minimatch(exclude);
       plausibleExcludePaths.push(mm.makeRe());
     });
+    const scriptProps = {
+      async: true,
+      defer: true,
+      'data-domain': domain,
+      src: `https://${plausibleDomain}${scriptURI}`,
+    };
+    if (trackAcquisition) {
+      scriptProps['data-track-acquisition'] = true;
+    }
 
     return setHeadComponents([
       <link
@@ -40,14 +49,7 @@ exports.onRenderBody = ({ setHeadComponents }, pluginOptions) => {
         rel="preconnect"
         href={`https://${plausibleDomain}`}
       />,
-      <script
-        key="gatsby-plugin-plausible-script"
-        async
-        defer
-        data-track-acquisition={trackAcquisition}
-        data-domain={domain}
-        src={`https://${plausibleDomain}${scriptURI}`}
-      ></script>,
+      <script key="gatsby-plugin-plausible-script" {...scriptProps}></script>,
       //See: https://docs.plausible.io/goals-and-conversions#trigger-custom-events-with-javascript
       <script
         key="gatsby-plugin-plausible-custom-events"

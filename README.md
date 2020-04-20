@@ -43,12 +43,12 @@ _NOTE: By default, this plugin only generates output when run in production mode
 
 ### Options
 
-| Option             | Explanation                                                                                 |
-| ------------------ | ------------------------------------------------------------------------------------------- |
-| `domain`           | The domain configured in Plausible (required)                                               |
-| `customDomain`     | Custom domain (if configured in Plausible's dashboard)                                      |
-| `trackAcquisition` | Whether to enable referral tracking (This will add special cookie for acquisition tracking) |
-| `excludePaths`     | Array of pathnames where page views will not be sent                                        |
+| Option             | Explanation                                                                                   |
+| ------------------ | --------------------------------------------------------------------------------------------- |
+| `domain`           | The domain configured in Plausible (required)                                                 |
+| `customDomain`     | Custom domain (if configured in Plausible's dashboard)                                        |
+| `trackAcquisition` | Whether to enable referral tracking (This will add a special cookie for acquisition tracking) |
+| `excludePaths`     | Array of pathnames where page views will not be sent                                          |
 
 ### Pageview events
 
