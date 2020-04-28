@@ -1,0 +1,34 @@
+# Setup Gatsby with Plausible Analytics
+
+[Plausible](https://plausible.io/) is a simple and privacy-friendly alternative
+to Google Analytics. It doesn’t use cookies and is fully compliant with GDPR,
+CCPA and PECR.
+
+This recipe will help install and configure `gatsby-plugin-plausible`.
+
+---
+
+Install the `gatsby-plugin-plausible` package.
+
+<NPMPackage name="gatsby-plugin-plausible" />
+
+---
+
+Add the plugin `gatsby-plugin-plausible` to your `gatsby-config.js`.
+
+<GatsbyPlugin
+  name="gatsby-plugin-plausible"
+  options={{
+    // Replace with the domain you configured in the Plausible dashboard
+    domain: `gatsby-plugin-plausible`,
+  }}
+/>
+
+---
+
+Now you should configure the Plausible plugin in `gatsby-config.js`. The only
+required option is the domain.
+
+For the full set of options checkout https://www.npmjs.com/package/gatsby-plugin-plausible
+
+Read more about Plausible at: https://docs.plausible.io/

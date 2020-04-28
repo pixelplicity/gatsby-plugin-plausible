@@ -11,6 +11,8 @@ The plugin includes the Plausible tracking script. It supports using a custom do
 ---
 
 - [Install](#install)
+  - [Manual](#manual)
+  - [Gatsby Recipe](#gatsby-recipe)
 - [How to use](#how-to-use)
   - [Options](#options)
   - [Pageview events](#pageview-events)
@@ -20,24 +22,46 @@ The plugin includes the Plausible tracking script. It supports using a custom do
 
 ## Install
 
-`npm install --save gatsby-plugin-plausible`
+### Manual
+
+1. Install `gatsby-plugin-plausible`
+
+   `npm install --save gatsby-plugin-plausible`
+
+2. Add plugin to `gatsby-config.js`
+
+   ```javascript
+   // In your gatsby-config.js
+   module.exports = {
+     plugins: [
+       // The only required option is the domain
+       {
+         resolve: `gatsby-plugin-plausible`,
+         options: {
+           domain: `aquil.io`,
+         },
+       },
+     ],
+   };
+   ```
+
+### Gatsby Recipe
+
+This will install `gatsby-plugin-plausible` and add a sample configuration.
+
+1. Upgrade gatsby-cli and gatsby to the latest version:
+
+   `npm install -g gatsby-cli@latest`
+   `npm install gatsby@latest`
+
+2. Run the recipe
+   `gatsby recipes https://raw.githubusercontent.com/Aquilio/gatsby-plugin-plausible/master/gatsby-recipe-plausible.mdx`
+
+3. Update `gatsby-config.js` [options](#options).
+
+To read more about reciped check out the [recipes announcement](https://www.gatsbyjs.org/blog/2020-04-15-announcing-gatsby-recipes/).
 
 ## How to use
-
-```javascript
-// In your gatsby-config.js
-module.exports = {
-  plugins: [
-    // The only required option is the domain
-    {
-      resolve: `gatsby-plugin-plausible`,
-      options: {
-        domain: `aquil.io`,
-      },
-    },
-  ],
-};
-```
 
 _NOTE: By default, this plugin only generates output when run in production mode. To test your tracking code, run `gatsby build && gatsby serve`_.
 
