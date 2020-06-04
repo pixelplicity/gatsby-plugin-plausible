@@ -6,7 +6,7 @@
 
 A Gatsby plugin for adding [Plausible](https://plausible.io/) analytics to your Gatsby site.
 
-The plugin includes the Plausible tracking script. It supports using a custom domain, optional referrer tracking and excluding specific paths from recording page views.
+The plugin includes the Plausible tracking script. It supports using a custom domain and excluding specific paths from recording page views.
 
 ---
 
