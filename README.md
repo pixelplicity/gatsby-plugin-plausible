@@ -59,7 +59,7 @@ This will install `gatsby-plugin-plausible` and add a sample configuration.
 
 3. Update `gatsby-config.js` [options](#options).
 
-To read more about reciped check out the [recipes announcement](https://www.gatsbyjs.org/blog/2020-04-15-announcing-gatsby-recipes/).
+To read more about recipes check out the [announcement](https://www.gatsbyjs.org/blog/2020-04-15-announcing-gatsby-recipes/).
 
 ## How to use
 
@@ -67,12 +67,11 @@ _NOTE: By default, this plugin only generates output when run in production mode
 
 ### Options
 
-| Option             | Explanation                                                                                   |
-| ------------------ | --------------------------------------------------------------------------------------------- |
-| `domain`           | The domain configured in Plausible (required)                                                 |
-| `customDomain`     | Custom domain (if configured in Plausible's dashboard)                                        |
-| `trackAcquisition` | Whether to enable referral tracking (This will add a special cookie for acquisition tracking) |
-| `excludePaths`     | Array of pathnames where page views will not be sent                                          |
+| Option         | Explanation                                            |
+| -------------- | ------------------------------------------------------ |
+| `domain`       | The domain configured in Plausible (required)          |
+| `customDomain` | Custom domain (if configured in Plausible's dashboard) |
+| `excludePaths` | Array of pathnames where page views will not be sent   |
 
 ### Pageview events
 
