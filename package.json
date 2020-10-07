@@ -1,7 +1,7 @@
 {
   "name": "gatsby-plugin-plausible",
   "description": "A Gatsby plugin for adding Plausible analytics to your Gatsby site",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "author": "Curtis Cummings <curtis@pixelplicity.com>",
   "license": "MIT",
   "repository": "pixelplicity/gatsby-plugin-plausible",

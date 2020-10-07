@@ -95,4 +95,4 @@ See [CHANGELOG.md](CHANGELOG.md).
 
 ## License
 
-[MIT](https://github.com/Aquilio/gatsby-plugin-plausible/blob/master/LICENSE) © [Pixelplicity](https://github.com/pixelplicity)
+[MIT](https://github.com/pixelplicity/gatsby-plugin-plausible/blob/master/LICENSE) © [Pixelplicity](https://github.com/pixelplicity)
