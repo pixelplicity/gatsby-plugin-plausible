@@ -1,8 +1,6 @@
 # gatsby-plugin-plausible
 
 [![npm package](https://flat.badgen.net/npm/v/gatsby-plugin-plausible)](https://badgen.net/npm/v/gatsby-plugin-plausible)
-[![Maintainability](https://flat.badgen.net/codeclimate/maintainability/Aquilio/gatsby-plugin-plausible)](https://codeclimate.com/github/Aquilio/gatsby-plugin-plausible/maintainability)
-![Dependabot](https://flat.badgen.net/dependabot/thepracticaldev/dev.to?icon=dependabot)
 
 A Gatsby plugin for adding [Plausible](https://plausible.io/) analytics to your Gatsby site.
 
@@ -97,4 +95,4 @@ See [CHANGELOG.md](CHANGELOG.md).
 
 ## License
 
-[MIT](https://github.com/Aquilio/gatsby-plugin-plausible/blob/master/LICENSE) © [Aquil.io](https://aquil.io)
+[MIT](https://github.com/Aquilio/gatsby-plugin-plausible/blob/master/LICENSE) © [Pixelplicity](https://github.com/pixelplicity)

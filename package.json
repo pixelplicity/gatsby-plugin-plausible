@@ -2,11 +2,11 @@
   "name": "gatsby-plugin-plausible",
   "description": "A Gatsby plugin for adding Plausible analytics to your Gatsby site",
   "version": "0.0.5",
-  "author": "Aquil.io <contact@aquil.io>",
+  "author": "Curtis Cummings <curtis@pixelplicity.com>",
   "license": "MIT",
-  "repository": "Aquilio/gatsby-plugin-plausible",
+  "repository": "pixelplicity/gatsby-plugin-plausible",
   "bugs": {
-    "url": "https://github.com/Aquilio/gatsby-plugin-plausible/issues"
+    "url": "https://github.com/pixelplicity/gatsby-plugin-plausible/issues"
   },
   "main": "index.js",
   "keywords": [
