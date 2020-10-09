@@ -1,14 +1,16 @@
 import React from 'react';
 
 const getOptions = (pluginOptions) => {
+  const isSelfHosted = pluginOptions.isSelfHosted || false;
   const plausibleDomain = pluginOptions.customDomain || 'plausible.io';
   const scriptURI =
-    plausibleDomain === 'plausible.io' ? '/js/plausible.js' : '/js/index.js';
+    (plausibleDomain === 'plausible.io' || isSelfHosted) ? '/js/plausible.js' : '/js/index.js';
   const domain = pluginOptions.domain;
   const excludePaths = pluginOptions.excludePaths || [];
   const trackAcquisition = pluginOptions.trackAcquisition || false;
 
   return {
+    isSelfHosted,
     plausibleDomain,
     scriptURI,
     domain,

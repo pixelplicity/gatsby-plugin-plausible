@@ -65,11 +65,12 @@ _NOTE: By default, this plugin only generates output when run in production mode
 
 ### Options
 
-| Option         | Explanation                                            |
-| -------------- | ------------------------------------------------------ |
-| `domain`       | The domain configured in Plausible (required)          |
-| `customDomain` | Custom domain (if configured in Plausible's dashboard) |
-| `excludePaths` | Array of pathnames where page views will not be sent   |
+| Option         | Explanation                                                                               |
+| -------------- | ----------------------------------------------------------------------------------------- |
+| `domain`       | The domain configured in Plausible (required)                                             |
+| `customDomain` | Custom domain (if configured in Plausible's dashboard)                                    |
+| `excludePaths` | Array of pathnames where page views will not be sent                                      |
+| `isSelfHosted` | If you [self-host](https://docs.plausible.io/self-hosting) Plausible. Defaults to `false` |
 
 ### Pageview events
 
