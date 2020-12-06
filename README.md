@@ -89,6 +89,30 @@ The event name can be anything. The second argument is an object with options. T
 
 _NOTE: Custom events will not show up right away. You have to configure a goal in your Plausible dashboard_.
 
+A minimal component to report 404 errors to Plausible could be implemented like this example.
+
+```
+import React from "react"
+
+export class NotFoundPage extends React.Component {
+  render() {
+    return (
+      <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+    )
+  }
+
+  componentDidMount() {
+    if (!window.plausible) {
+      console.log("Would have tracked: 404")
+    } else {
+      window.plausible("404")
+    }
+  }
+}
+
+export default NotFoundPage
+```
+
 ## Changelog
 
 See [CHANGELOG.md](CHANGELOG.md).
