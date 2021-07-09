@@ -3,7 +3,7 @@ import React from 'react';
 const getOptions = (pluginOptions) => {
   const plausibleDomain = pluginOptions.customDomain || 'plausible.io';
   const scriptURI =
-    plausibleDomain === 'plausible.io' ? '/js/plausible.js' : '/js/index.js';
+    plausibleDomain === 'plausible.io' ? pluginOptions.outbound ? '/js/plausible.outbound-links.js' : '/js/plausible.js' : '/js/index.js';
   const domain = pluginOptions.domain;
   const excludePaths = pluginOptions.excludePaths || [];
   const trackAcquisition = pluginOptions.trackAcquisition || false;
